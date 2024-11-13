@@ -10,6 +10,7 @@ using EmployeeHub.Models;
 
 namespace EmployeeHub.Controllers
 {
+    [Authorize]
     public class SalaryHistoryController : Controller
     {
         private readonly AppDbContext _context;

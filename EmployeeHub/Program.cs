@@ -55,6 +55,11 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.SlidingExpiration = true;
 });
 
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders();
+
 
 var app = builder.Build();
 

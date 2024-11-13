@@ -11,6 +11,7 @@ using EmployeeHub.Models;
 
 namespace EmployeeHub.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly AppDbContext _context;
