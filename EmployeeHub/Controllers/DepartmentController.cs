@@ -149,6 +149,25 @@ namespace EmployeeHub.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // GET: Display Salary History by Department
+        public async Task<IActionResult> SalaryHistory(int departmentId)
+        {
+            var salaryHistories = await _context.SalaryHistories
+                .Include(s => s.Employee)
+                .Where(s => s.Employee.DepartmentID == departmentId)
+                .OrderBy(s => s.EffectiveDate)
+                .ToListAsync();
+
+            var department = await _context.Departments.FindAsync(departmentId);
+
+            if (department == null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.DepartmentName = department.DepartmentName;
+            return View(salaryHistories);
+        }
         private bool DepartmentExists(int id)
         {
             return _context.Departments.Any(e => e.DepartmentID == id);
