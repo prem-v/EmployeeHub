@@ -34,10 +34,6 @@ secrets/
 ## Log files
 *.log
 
-## Configuration files (don't push appsettings.json or other sensitive settings)
-appsettings.json
-appsettings.Development.json
-appsettings.Production.json
 
 ## Node modules (for frontend frameworks like React, Angular, etc.)
 node_modules/
