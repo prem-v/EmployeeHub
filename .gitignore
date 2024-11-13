@@ -20,6 +20,9 @@ wwwroot/
 *.db
 *.sqlite
 EmployeeHub.db
+employeehub.db
+employeehub.db-shm
+employeehub.db-wal
 
 ## ASP.NET Core secrets storage (don't push secrets to source control)
 secrets/
