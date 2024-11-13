@@ -1,0 +1,69 @@
+## User-specific files
+.idea/
+.vscode/
+.DS_Store
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## ASP.NET Core
+bin/
+obj/
+wwwroot/
+
+## SQLite database files
+*.db
+*.sqlite
+EmployeeHub.db
+
+## ASP.NET Core secrets storage (don't push secrets to source control)
+secrets/
+
+## ASP.NET Core Razor generator
+*.g.cs
+*.g.i.cs
+
+## Log files
+*.log
+
+## Configuration files (don't push appsettings.json or other sensitive settings)
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+## Node modules (for frontend frameworks like React, Angular, etc.)
+node_modules/
+
+## npm or yarn package lock files
+package-lock.json
+yarn.lock
+
+## JetBrains Rider project settings
+.idea/
+
+## Windows installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+## .NET Core SDK and runtime versions
+dotnet-tools.json
+
+## Files created by Visual Studio for Mac
+.vscode/
+
+## User-specific Visual Studio for Mac files
+.vscode/
+
+## Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
