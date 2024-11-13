@@ -23,7 +23,7 @@ namespace EmployeeHub.Models
 
         public DateTime HireDate { get; set; }
 
-         // Navigation property to Department
+        // Navigation property to Department
         public Department Department { get; set; }
     }
 }
