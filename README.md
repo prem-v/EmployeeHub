@@ -25,6 +25,11 @@ dotnet restore
 dotnet build
 ```
 
+### Install dotnet-ef
+``` bash
+dotnet tool install --global dotnet-ef 
+```
+
 ### Set Up the Database
 ``` bash
 dotnet ef database update
