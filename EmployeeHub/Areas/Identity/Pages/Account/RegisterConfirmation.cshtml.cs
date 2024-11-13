@@ -73,7 +73,7 @@ namespace EmployeeHub.Areas.Identity.Pages.Account
                     protocol: Request.Scheme);
             }
 
-            return Page();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -100,6 +100,10 @@ app.MapGet("/", async (HttpContext context) =>
     }
 });
 
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 // Map Razor Pages for Identity UI (Login/Registration)
 app.MapRazorPages();
 
