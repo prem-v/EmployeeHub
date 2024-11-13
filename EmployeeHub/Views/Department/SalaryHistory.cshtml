@@ -1,0 +1,23 @@
+@model IEnumerable<EmployeeHub.Models.SalaryHistory>
+
+<h2>Salary History for Department: @ViewBag.DepartmentName</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Salary Amount</th>
+            <th>Effective Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var salary in Model)
+        {
+            <tr>
+                <td>@salary.Employee.FirstName @salary.Employee.LastName</td>
+                <td>@salary.SalaryAmount</td>
+                <td>@salary.EffectiveDate.ToString("MM/dd/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

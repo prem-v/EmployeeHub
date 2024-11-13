@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EmployeeHub.Models
 {
@@ -16,11 +17,13 @@ namespace EmployeeHub.Models
         public string LastName { get; set; }
 
         // Foreign Key to Department
+        [ForeignKey("Department")]
+        [Required]  // Ensure this is required if each Employee must belong to a Department
         public int DepartmentID { get; set; }
 
-        // Navigation property to Department
-        public Department Department { get; set; }
-
         public DateTime HireDate { get; set; }
+
+         // Navigation property to Department
+        public Department Department { get; set; }
     }
 }
