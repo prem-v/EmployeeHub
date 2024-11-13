@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EmployeeHub.Data;
 using EmployeeHub.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EmployeeHub.Controllers
 {
