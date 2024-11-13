@@ -57,11 +57,12 @@ namespace EmployeeHub.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("EmployeeID,FirstName,LastName,DepartmentID,HireDate")] Employee employee)
         {
+            ModelState.Remove(nameof(employee.Department));
             if (ModelState.IsValid)
             {
-                Console.WriteLine("Saving record");
                 _context.Add(employee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -94,6 +95,7 @@ namespace EmployeeHub.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("EmployeeID,FirstName,LastName,DepartmentID,HireDate")] Employee employee)
         {
+            ModelState.Remove(nameof(employee.Department));
             if (id != employee.EmployeeID)
             {
                 return NotFound();

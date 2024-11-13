@@ -61,6 +61,8 @@ namespace EmployeeHub.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("SalaryID,EmployeeID,SalaryAmount,EffectiveDate,DepartmentID")] SalaryHistory salaryHistory)
         {
+            ModelState.Remove(nameof(salaryHistory.Department));
+            ModelState.Remove(nameof(salaryHistory.Employee));
             if (ModelState.IsValid)
             {
                 _context.Add(salaryHistory);
@@ -97,6 +99,8 @@ namespace EmployeeHub.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("SalaryID,EmployeeID,SalaryAmount,EffectiveDate,DepartmentID")] SalaryHistory salaryHistory)
         {
+            ModelState.Remove(nameof(salaryHistory.Department));
+            ModelState.Remove(nameof(salaryHistory.Employee));
             if (id != salaryHistory.SalaryID)
             {
                 return NotFound();
