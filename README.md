@@ -48,7 +48,7 @@ Database Migration Error: If you see an error related to the database, make sure
 SQLite Connection Issue: Double-check the connection string in appsettings.json. It should be correct for SQLite, for example:
 
 ``` json
-Copy code
+Check your connection string
 "ConnectionStrings": {
   "DefaultConnection": "Data Source=EmployeeHub.db"
 }
